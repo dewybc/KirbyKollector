@@ -35,10 +35,10 @@
             </objects>
             <point key="canvasLocation" x="1076" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--Kirby View Controller-->
         <scene sceneID="2VB-si-bOD">
             <objects>
-                <viewController id="hup-3S-6VO" sceneMemberID="viewController">
+                <viewController id="hup-3S-6VO" customClass="KirbyViewController" customModule="KirbyCollector" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ghs-bm-4wN"/>
                         <viewControllerLayoutGuide type="bottom" id="OlO-11-smB"/>
@@ -47,14 +47,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A81-Mk-xYn">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Blue-circle-200px.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="A81-Mk-xYn">
                                 <rect key="frame" x="43" y="84" width="290" height="170"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="170" id="GEV-3J-emd"/>
                                     <constraint firstAttribute="width" constant="290" id="ai4-1B-iFQ"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PHd-cu-5Fe">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PHd-cu-5Fe">
                                 <rect key="frame" x="43" y="274" width="290" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -63,6 +63,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7k-23-5j6">
                                 <rect key="frame" x="173" y="324" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="hup-3S-6VO" eventType="touchUpInside" id="sgx-yw-rrX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -78,10 +81,22 @@
                     </view>
                     <navigationItem key="navigationItem" id="QEY-Fb-iU7">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="camera" id="k9j-oR-BKD"/>
-                            <barButtonItem title="Photos" id="O11-I3-Mvn"/>
+                            <barButtonItem systemItem="camera" id="k9j-oR-BKD">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="hup-3S-6VO" id="epw-7Z-vGG"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Photos" id="O11-I3-Mvn">
+                                <connections>
+                                    <action selector="photosTapped:" destination="hup-3S-6VO" id="58D-73-snr"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="A81-Mk-xYn" id="ZUZ-Ju-nKa"/>
+                        <outlet property="titleText" destination="PHd-cu-5Fe" id="Ln0-3v-vOA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dug-6k-3AZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -106,4 +121,7 @@
             <point key="canvasLocation" x="364" y="-543.77811094452773"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Blue-circle-200px.jpg" width="250" height="220"/>
+    </resources>
 </document>

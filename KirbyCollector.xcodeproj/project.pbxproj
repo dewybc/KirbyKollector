@@ -13,6 +13,8 @@
 		9B75B92D1EC53DAA00269C17 /* KirbyCollector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B75B92B1EC53DAA00269C17 /* KirbyCollector.xcdatamodeld */; };
 		9B75B92F1EC53DAA00269C17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B75B92E1EC53DAA00269C17 /* Assets.xcassets */; };
 		9B75B9321EC53DAA00269C17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B75B9301EC53DAA00269C17 /* LaunchScreen.storyboard */; };
+		9B75B93A1EC5422700269C17 /* Blue-circle-200px.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B75B9391EC5422700269C17 /* Blue-circle-200px.jpg */; };
+		9B75B93C1EC5433400269C17 /* KirbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B75B93B1EC5433400269C17 /* KirbyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		9B75B92E1EC53DAA00269C17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B75B9311EC53DAA00269C17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B75B9331EC53DAA00269C17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B75B9391EC5422700269C17 /* Blue-circle-200px.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Blue-circle-200px.jpg"; sourceTree = "<group>"; };
+		9B75B93B1EC5433400269C17 /* KirbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KirbyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,9 @@
 			children = (
 				9B75B9241EC53DAA00269C17 /* AppDelegate.swift */,
 				9B75B9261EC53DAA00269C17 /* ViewController.swift */,
+				9B75B9391EC5422700269C17 /* Blue-circle-200px.jpg */,
 				9B75B9281EC53DAA00269C17 /* Main.storyboard */,
+				9B75B93B1EC5433400269C17 /* KirbyViewController.swift */,
 				9B75B92E1EC53DAA00269C17 /* Assets.xcassets */,
 				9B75B9301EC53DAA00269C17 /* LaunchScreen.storyboard */,
 				9B75B9331EC53DAA00269C17 /* Info.plist */,
@@ -129,6 +135,7 @@
 			files = (
 				9B75B9321EC53DAA00269C17 /* LaunchScreen.storyboard in Resources */,
 				9B75B92F1EC53DAA00269C17 /* Assets.xcassets in Resources */,
+				9B75B93A1EC5422700269C17 /* Blue-circle-200px.jpg in Resources */,
 				9B75B92A1EC53DAA00269C17 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B75B93C1EC5433400269C17 /* KirbyViewController.swift in Sources */,
 				9B75B9271EC53DAA00269C17 /* ViewController.swift in Sources */,
 				9B75B92D1EC53DAA00269C17 /* KirbyCollector.xcdatamodeld in Sources */,
 				9B75B9251EC53DAA00269C17 /* AppDelegate.swift in Sources */,
