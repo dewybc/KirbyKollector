@@ -9,7 +9,7 @@
 import UIKit
 
 class KirbyViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+    
     @IBOutlet weak var titleText: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     
@@ -22,10 +22,10 @@ class KirbyViewController: UIViewController, UIImagePickerControllerDelegate, UI
         
         imagePicker.delegate = self
     }
-
     
     
-       
+    
+    
     @IBAction func photosTapped(_ sender: Any) {
         
         imagePicker.sourceType = .photoLibrary
@@ -33,7 +33,7 @@ class KirbyViewController: UIViewController, UIImagePickerControllerDelegate, UI
         present(imagePicker, animated: true, completion: nil)
         
     }
-
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
@@ -48,17 +48,23 @@ class KirbyViewController: UIViewController, UIImagePickerControllerDelegate, UI
     
     @IBAction func cameraTapped(_ sender: Any) {
     }
-
+    
     
     @IBAction func addTapped(_ sender: Any) {
         
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let kbphoto = Kirby(context: context)
-        kbphoto.title = titleText.text
-        kbphoto.image = UIImagePNGRepresentation(imageView.image!) as NSData?
-        
-        (UIApplication.shared.delegate as! AppDelegate).saveContext()
-        
+        let titlecheck = titleText.text
+        if titlecheck == "" {
+            
+        } else {
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            let kbphoto = Kirby(context: context)
+            kbphoto.title = titleText.text
+            kbphoto.image = UIImagePNGRepresentation(imageView.image!) as NSData?
+            
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            
+            navigationController!.popViewController(animated: true)
+        }
         
     }
 }
