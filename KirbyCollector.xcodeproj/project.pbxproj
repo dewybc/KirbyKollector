@@ -62,9 +62,9 @@
 			children = (
 				9B75B9241EC53DAA00269C17 /* AppDelegate.swift */,
 				9B75B9261EC53DAA00269C17 /* ViewController.swift */,
+				9B75B93B1EC5433400269C17 /* KirbyViewController.swift */,
 				9B75B9391EC5422700269C17 /* Blue-circle-200px.jpg */,
 				9B75B9281EC53DAA00269C17 /* Main.storyboard */,
-				9B75B93B1EC5433400269C17 /* KirbyViewController.swift */,
 				9B75B92E1EC53DAA00269C17 /* Assets.xcassets */,
 				9B75B9301EC53DAA00269C17 /* LaunchScreen.storyboard */,
 				9B75B9331EC53DAA00269C17 /* Info.plist */,
@@ -314,6 +314,7 @@
 				9B75B9381EC53DAA00269C17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

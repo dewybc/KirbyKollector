@@ -38,7 +38,7 @@
                     <navigationItem key="navigationItem" id="I0z-NM-K1j">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="eug-0o-awh">
                             <connections>
-                                <segue destination="hup-3S-6VO" kind="show" id="2jc-b4-I3C"/>
+                                <segue destination="hup-3S-6VO" kind="show" identifier="kirbySegue" id="2jc-b4-I3C"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -82,6 +82,16 @@
                                     <action selector="addTapped:" destination="hup-3S-6VO" eventType="touchUpInside" id="sgx-yw-rrX"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0H-Lf-iSS">
+                                <rect key="frame" x="165" y="369" width="45" height="30"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleColor" red="1" green="0.027811560264654478" blue="0.042412061148509483" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addTapped:" destination="hup-3S-6VO" eventType="touchUpInside" id="y1A-hf-SY6"/>
+                                    <action selector="deleteTapped:" destination="hup-3S-6VO" eventType="touchUpInside" id="Q2u-Be-n2n"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -91,6 +101,8 @@
                             <constraint firstItem="P7k-23-5j6" firstAttribute="top" secondItem="PHd-cu-5Fe" secondAttribute="bottom" constant="20" id="W48-cY-uf1"/>
                             <constraint firstItem="A81-Mk-xYn" firstAttribute="centerX" secondItem="niV-pC-0ab" secondAttribute="centerX" id="grA-Ru-ysv"/>
                             <constraint firstItem="PHd-cu-5Fe" firstAttribute="top" secondItem="A81-Mk-xYn" secondAttribute="bottom" constant="20" id="kjg-5b-Ajg"/>
+                            <constraint firstItem="R0H-Lf-iSS" firstAttribute="top" secondItem="P7k-23-5j6" secondAttribute="bottom" constant="15" id="oC1-2h-myD"/>
+                            <constraint firstItem="R0H-Lf-iSS" firstAttribute="centerX" secondItem="niV-pC-0ab" secondAttribute="centerX" id="sLh-3k-Rm5"/>
                             <constraint firstItem="PHd-cu-5Fe" firstAttribute="width" secondItem="A81-Mk-xYn" secondAttribute="width" id="tKM-e2-ljM"/>
                         </constraints>
                     </view>
@@ -109,6 +121,8 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addupdate" destination="P7k-23-5j6" id="QkW-N1-PPn"/>
+                        <outlet property="deleteButton" destination="R0H-Lf-iSS" id="Al1-Db-h3o"/>
                         <outlet property="imageView" destination="A81-Mk-xYn" id="ZUZ-Ju-nKa"/>
                         <outlet property="titleText" destination="PHd-cu-5Fe" id="Ln0-3v-vOA"/>
                     </connections>

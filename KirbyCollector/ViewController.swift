@@ -51,5 +51,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let kirby = kirbys[indexPath.row]
+        performSegue(withIdentifier: "kirbySegue", sender: kirby)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as! KirbyViewController
+        nextVC.kirby = sender as? Kirby
+        
+    }
 }
 
